@@ -48,9 +48,9 @@ img {
     padding: 0px 15px;
     margin-left: auto;
     margin-right: auto;
-/* подсветка */
-    /* outline: 2px solid green;
-    outline-offset: -2px; */
+    
+    outline: 2px solid green;
+    outline-offset: -2px;
 }
 .section {
     padding: 120px 0px;
@@ -186,6 +186,13 @@ img {
 /* hero section */
 .hero {
     padding: 188px 0px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/hero/image-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+.hero-container {
 
 }
 .hero-title {
@@ -277,6 +284,11 @@ img {
     padding: 12px;
     border-radius: 50%;
 }
+.social-item:focus .social-icon,
+.social-item:hover .social-icon {
+    background-color: #404BBF;
+}
+
 .icon {
 }
 /* portfolio section */
@@ -346,4 +358,8 @@ img {
 }
 .footer-icon {
     gap: 16px;
+}
+.footer-item:focus .footer-pic,
+.footer-item:hover .footer-pic {
+    background-color: #31D0AA;
 }
