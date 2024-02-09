@@ -159,7 +159,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--WHITE, #FFF);
+    background-color: var(--WHITE, #FFF);
 }
 .header-nav {
     display: flex;
@@ -182,7 +182,10 @@ img {
     padding: 24px 0px;
     position: relative;
 }
-.nav-link.active::after {
+.active {
+    color: #404BBF;
+}
+.active::after {
     content: "";
     display: block;
     width: 100%;
@@ -192,6 +195,16 @@ img {
     position: absolute;
     bottom: -1px;
 }
+/* .nav-link.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    position: absolute;
+    bottom: -1px;
+} */
 .header-address {
 }
 .address-list {
@@ -257,18 +270,20 @@ img {
     border-radius: 4px;
     border: 1px solid var(--LIGHT-SLATE, #8E8F99);
     background: var(--CLOUD, #F4F4FD);
+    margin-bottom: 8px;
 }
 .benefits-icon {
 }
 .benefits-captain {
-    margin: 8px 0;   
+    /* margin: 8px 0;    */
+    margin-bottom: 8px;
 }
 .benefits-desc {
 }
 
 /* users section */
 .users {
-    background: var(--CLOUD, #F4F4FD);
+    background-color: #F4F4FD;
 }
 .users-subject {
 }
@@ -278,11 +293,10 @@ img {
     gap: 24px;
 }
 .users-item {
-    background: var(--WHITE, #FFF);
     display: flex;
     flex-direction: column;
     border-radius: 0px 0px 4px 4px;
-    background: var(--WHITE, #FFF);
+    background-color: var(--WHITE, #FFF);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);   
 }
 .users-avatar {
@@ -304,9 +318,8 @@ img {
     width: 40px;
     height: 40px;
 }
-
-.social-item:focus .social-icon,
-.social-item:hover .social-icon {
+.social-icon:focus,
+.social-icon:hover {
     background-color: #404BBF;
 }
 .social-icon {
@@ -317,6 +330,7 @@ img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .icon {
@@ -376,10 +390,10 @@ img {
 .footer {
     padding: 100px 0px;
     display: flex;
-    align-items: baseline;
 }
 .footer-top {
     display: flex;
+    align-items: baseline;
 }
 .footer-logo-slogan {
     margin-right: 120px;
@@ -401,11 +415,11 @@ img {
 .footer-icon {
     gap: 16px;
 }
-.footer-item {
+.footer-pic {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-item:focus .footer-pic,
-.footer-item:hover .footer-pic {
+.footer-pic:focus,
+.footer-pic:hover {
     background-color: #31D0AA;
 }
 .footer-pic {
